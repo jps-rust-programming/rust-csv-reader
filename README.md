@@ -18,3 +18,9 @@ This allows you to return various error types without needing to specify them al
 
 - `Error Propagation`: The `?` operator is used to propagate errors. If an error occurs, it automatically returns Err(e) from the function.
 - `Handling Multiple Error Types`: Using `Box<dyn Error>` allows for flexibility in the types of errors that can be returned, which is especially useful in functions that may deal with different libraries or error types.
+
+## <P: AsRef<Path>>(path: P)
+
+`AsRef<Path>` is a trait that allows you to convert a type into a reference to a Path.
+
+This is particularly useful when working with file paths, as it enables your functions to accept various types of path representations (like `String`, `&str`, and `PathBuf`)
